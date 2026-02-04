@@ -45,5 +45,12 @@ While these reports reflect my initial experimental findings, I aim to enhance p
 * **Images:** Included as supporting visual documentation alongside the **.tex** source and **PDF** reports.
 
 ---
+## ⚖️ Legal Notice & Disclaimer
+
+* **Purpose:** This repository is provided **strictly for educational, reference, and documentation purposes**. It serves as a personal academic portfolio to demonstrate experimental methodology and advanced LaTeX-based scientific reporting skills in physics.
+* **Academic Integrity:** Any unauthorized reuse, reproduction, or submission of these reports—whether in whole or in part—as original academic work in any educational institution is **strictly prohibited**. Such actions constitute academic misconduct and plagiarism.
+* **Copyright & Attribution:** All content is **Copyright © 2026 Maroua Mezhoud**. All rights reserved. Formal attribution and proper citation of this repository are mandatory for any academic or educational reference to the specific methods, TikZ/PGFPlots figures, or data analysis presented herein.
+
+---
 **Academic Year:** 2025–2026  
 **Developed by:** Maroua Mezhoud
