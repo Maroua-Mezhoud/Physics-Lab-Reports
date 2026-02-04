@@ -1,0 +1,29 @@
+Copyright © 2026 Maroua Mezhoud. All Rights Reserved.
+
+ACADEMIC COPYRIGHT NOTICE:
+
+This repository, including all source code (.tex), data files, 
+graphical illustrations (TikZ, PGFPlots), and final reports (PDF), 
+is the intellectual property of Maroua Mezhoud.
+
+1. PROHIBITION OF PLAGIARISM:
+   Unauthorized reproduction, distribution, or submission of this work 
+   as original material for academic credit in any educational institution 
+   is strictly prohibited and constitutes academic misconduct and plagiarism.
+
+2. PERMITTED USE:
+   Access to this repository is granted for individual educational 
+   reference and personal, non-commercial study purposes only. 
+
+3. CITATION REQUIREMENT:
+   Any reference to the methodology, experimental analysis, or 
+   visualizations contained herein must be accompanied by proper 
+   academic citation of this repository and the author.
+
+4. NO WARRANTY:
+   This content is provided "as is" for documentation of laboratory work only. 
+   The author makes no warranties regarding accuracy or completeness and 
+   assumes no liability for errors or omissions.
+
+For permission requests regarding further use, please contact the author 
+via the ResearchGate profile provided in the README.
