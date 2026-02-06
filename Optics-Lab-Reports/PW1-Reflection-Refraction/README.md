@@ -6,8 +6,9 @@ This experiment verifies Snell's and Descartes' laws using a plane diopter. It i
 ## 📂 Laboratory Assets
 * **[📄 View Full Report (PDF)](./Report_PW1.pdf)**
 * **[⚛️ LaTeX Source Code](./Source_PW1.tex)**
-* **[🖼️ Experimental Figures](./images/)**
-
+* **[🖼️ Experimental Figures](./5766862084971891532.jpg)**
+* **[🖼️ University Logo](./footer-logo.png)**
+* 
 ## 📊 Results Summary
 * **Determined Refractive Index:** $n = 1.39 \pm 0.06$.
 * **Key Conclusion:** Successful linear correlation between $\sin(i)$ and $\sin(r)$.
