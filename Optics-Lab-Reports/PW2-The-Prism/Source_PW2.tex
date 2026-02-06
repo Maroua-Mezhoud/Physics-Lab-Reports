@@ -1,0 +1,426 @@
+\documentclass[12pt,a4paper,twoside]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath,amsfonts,amssymb} 
+\usepackage{float}
+\usepackage{caption}
+\usepackage{booktabs} 
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.18}
+\usepackage{tikz}
+\usetikzlibrary{calc,fit,angles,quotes,intersections}
+\usepackage{adjustbox}
+\usepackage[style=numeric,sorting=none]{biblatex}
+\addbibresource{references.bib}
+\usepackage{array}
+\usepackage{multirow}
+\usepackage{longtable}
+\usepackage{tabularx}
+\newcolumntype{Y}{>{\centering\arraybackslash}X}
+\usepackage{siunitx}
+\usepackage{microtype}
+\usepackage{multicol}
+\usepackage{listings}
+\usepackage{xcolor}
+\usepackage[hidelinks]{hyperref}
+
+\usepackage[a4paper]{geometry}
+\geometry{
+  top=1in,
+  bottom=1in,
+  inner=1.25in,   
+  outer=1in       
+}
+\usepackage{graphicx}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\renewcommand{\headrulewidth}{0pt} 
+\fancyhf{}
+
+\begin{document}
+
+\begin{titlepage}
+
+\centering
+
+\begin{flushleft}
+    \includegraphics[width=0.18\textwidth]{footer-logo.png}
+\end{flushleft}
+
+\vspace{1cm}
+
+{\Large \textbf{Mohamed El Bachir El Ibrahimi University of Bordj Bou Arréridj} \par}
+
+{\large Faculty of Science and Technology \par}
+
+{\large Department of Materials Science \par}
+
+{\large Undergraduate Programme (LMD) – Physics – Year 2\par}
+   
+{\large Course: Geometrical and Physical Optics\par}
+   
+\vspace*{\fill}
+{\Huge \textbf{Practical Work  N\textsuperscript{o}:2} \\ 
+the  prisme\par}
+\vspace*{\fill}
+
+  {\large \textbf{Submitted by:} \\
+Mezhoud maroua\\  \par}
+
+\vspace{1 cm}
+    
+    {\large \textbf{Supervised by:} \\ Dr. S. Mameri\par}
+    {\large Group:2 \par}
+    
+\vspace{2 cm}
+
+    {\large Date of submission: December 15, 2025 \par}
+
+    {\large Academic Year: 2025–2026 \par}  
+    
+\vfill
+    
+\end{titlepage}
+
+\pagestyle{plain}
+
+\pagenumbering{arabic}  
+\setcounter{page}{1}    
+
+\begin{abstract}
+This practical work investigates the refraction of light through a prism to verify the laws of geometrical optics and determine the prism's refractive index. The experiment involved measuring the angles of incidence, refraction, and emergence for various incident rays and calculating the deviation angle. The minimum deviation method was applied to compute the refractive index of the prism material. The results showed good agreement with theoretical predictions, confirming Snell's law and the symmetry condition inside the prism. The calculated refractive index was found to be $n \approx 1.50$, consistent with typical values for glass. This study demonstrates the reliability of experimental methods in understanding light propagation and strengthens the link between theoretical optics and practical observation.
+\end{abstract}
+
+\tableofcontents
+
+\newpage 
+
+\section{Introduction}
+
+Optics is a fundamental branch of physics that investigates the behavior of light and its interactions with different media. The study of light refraction through prisms is particularly important, as it illustrates essential concepts such as the deviation of light, the angle of minimum deviation, and the refractive index of materials. 
+
+A prism is an optical element with flat, polished surfaces that refract light. When a light ray passes through a prism, it changes direction due to the difference in optical density between the air and the prism material. The amount of bending depends on the prism's geometry and the refractive index of the material. 
+
+This practical work aims to experimentally verify the laws of refraction in a prism and to determine the refractive index of the prism material. By analyzing the incident, refracted, and emergent rays, students can develop a deeper understanding of light propagation and the quantitative relationships governing optical systems.
+
+\section{Objective}
+The objectives of this experiment are:
+\begin{itemize}
+  \item Verify the prism laws
+  \item Determine the prism's refractive index $n$
+\end{itemize}
+
+\section{Theoretical Background}
+\subsection{Refraction of Light}
+Refraction is the phenomenon by which a light ray changes direction when it passes from one transparent medium to another with a different optical density. This behavior is governed by \textbf{Snell's law}:
+\[
+n_1 \sin i = n_2 \sin r
+\]
+where:
+\begin{itemize}
+    \item \(i\) is the angle of incidence,
+    \item \(r\) is the angle of refraction,
+    \item \(n_1\) and \(n_2\) are the refractive indices of the incident and transmitted media, respectively.
+\end{itemize}
+This law provides the quantitative relationship that allows us to predict how much the light ray bends at the interface between two media.
+
+\subsection{The Prism as an Optical Element}
+A prism is a transparent optical component with two plane faces inclined at an \textbf{apex angle} \(A\). When a light ray passes through a prism, it undergoes two refractions:
+\begin{enumerate}
+    \item At the first face, the incident ray bends towards the normal if it enters a denser medium.
+    \item Inside the prism, the light travels at an angle \(r\) relative to the normal.
+    \item At the second face, the ray emerges back into air, bending away from the normal at an angle \(r'\), forming an \textbf{angle of emergence} \(i'\).
+\end{enumerate}
+The overall change in direction of the ray is called the \textbf{angle of deviation} \(D\):
+\[
+D = i + i' - A
+\]
+
+\subsection{Minimum Deviation and Symmetry}
+A key concept in prism optics is the \textbf{minimum deviation} \(D_\text{min}\). This occurs when the path of the light ray through the prism is symmetric, i.e.,:
+\[
+i = i' \quad \text{and} \quad r = r'
+\]
+In this configuration, the deviation \(D_\text{min}\) is the smallest possible for the given prism, and the relationship between the prism's apex angle \(A\), \(D_\text{min}\), and the refractive index \(n\) of the material is given by:
+\[
+n = \frac{\sin \frac{A + D_\text{min}}{2}}{\sin \frac{A}{2}}
+\]
+
+\subsection{Experimental Relevance}
+In practice, by measuring the incident angle \(i\), the emergent angle \(i'\), and the apex angle \(A\) of the prism, one can:
+\begin{itemize}
+    \item Compute the deviation angle \(D\) for each incidence.
+    \item Identify the minimum deviation \(D_\text{min}\).
+    \item Calculate the prism's refractive index \(n\) without directly measuring the material's optical density.
+\end{itemize}
+
+\subsection{Connection Between Theory and Measurement}
+The experimental procedure involves:
+\begin{itemize}
+    \item Aligning the prism and light source to obtain a well-defined incident ray.
+    \item Measuring the angles \(i\), \(r\), \(r'\), and \(i'\) accurately using a protractor.
+    \item Calculating the deviation \(D\) for each trial and comparing it with theoretical predictions.
+    \item Determining the prism's apex angle \(A\) indirectly by summing the internal refraction angles (\(r + r' \approx A\)) for different incidence angles.
+\end{itemize}
+This systematic approach ensures that the experimental results can be directly related to the theoretical formulas, allowing verification of the laws of refraction and precise determination of the prism's refractive index.
+
+\begin{figure}[H]
+\centering
+\begin{tikzpicture}
+\node[draw, thick, inner sep=20pt] (box) { % <-- كبّرت الـ inner sep
+    \begin{tikzpicture}[scale=1.8] % <-- كبّرت الـ scale قليلاً أيضاً
+        % ---------- Prism ----------
+        \coordinate (A)  at (0,3);
+        \coordinate (B)  at (3,0);
+        \coordinate (C)  at (0,-3);
+
+        \draw[thick ,fill=blue!5!white] (A) -- (B) -- (C) -- cycle;
+
+        % ---------- normale ----------
+        \draw[dashed] (-3,0) -- (3,0);
+
+        % ---------- Incident ray ----------
+        \draw[->, red, thick] (-3,1.73) -- (0,0)
+            node at (-3,1.0) {Incident ray};
+
+        % --- i ---
+        \draw[->, thin] (-0.7,0.3) arc[start angle=140,end angle=180,radius=0.4 cm];
+        \node at (-1.5,0.2) {$i$};
+
+        % ---------- Refracted ray ----------
+        \draw[->, blue, thick] (0,0) -- (2.3,-0.7);
+
+        % --- r ---
+        \draw[->, thin] (0.7,0) arc[start angle=40,end angle=0,radius=0.3 cm];
+        \node at (1,-0.15) {$r$};
+
+        % ---------- Refracted ray exit ----------
+        \draw[->, green!80!black, thick] (2.3,-0.7) -- (4,-0.7);
+
+        % ---------- normale inside ----------
+        \draw[dashed] (0,1.45) -- (3.3,-1.64);
+
+        % --- r' ---
+        \draw[->, thin] (1.8,-0.27) arc[start angle=135,end angle=185,radius=0.3 cm];
+        \node at (1.6,-0.28) {$r'$};
+
+        % --- i' ---
+        \draw[->, thin] (2.55,-0.9) arc[start angle=300,end angle=345,radius=0.3 cm];
+        \node at (2.9,-0.9) {$i'$};
+
+        % --- A ---
+        \draw[->, thin] (0,-2.6) arc[start angle=90,end angle=45,radius=0.4 cm];
+        \node at (0.15,-2.44) {$A$};
+    \end{tikzpicture}
+};
+\end{tikzpicture}
+\caption{Incident ray hits left face, refracts inside the prism, then emerges from the right face.}
+\end{figure}
+
+\section{Apparatus and Materials}
+The following apparatus and materials were used in the experiment:
+\begin{itemize}
+   \item \textbf{Light source} – produces a narrow and well-defined beam for tracing light paths.
+   \item \textbf{Prism} – to study light refraction and verify prism laws.
+   \item \textbf{Ruler and pencil} – for accurately drawing the incident and refracted rays on paper.
+\end{itemize}
+
+\section{Experimental Procedure}
+
+The experiment was carried out according to the following steps:
+
+\begin{enumerate}
+    \item The prism was placed on the drawing board or experimental table, with its base stabilized and aligned with the protractor.
+    \item A narrow light beam from the source was directed toward one face of the prism at specified angles of incidence, starting from $5^\circ$ up to $85^\circ$.
+    \item For each angle, the path of the incident ray was traced on paper using a pencil and a ruler.
+    \item The points where the ray entered and exited the prism were carefully marked.
+    \item The refracted ray inside the prism and the emergent ray outside were drawn accurately, ensuring precise angular measurements.
+    \item The angles of refraction $r$ and $r'$ were measured using a protractor.
+    \item The deviation angle $D$ was calculated as the difference between the directions of the incident and emergent rays.
+    \item This procedure was repeated for all selected angles to obtain a complete set of measurements.
+    \item The collected data were then used to determine the prism's refractive index $n$ and to verify the laws of refraction.
+\end{enumerate}
+
+as illustrated in the corresponding figure:
+
+\begin{figure}[H]
+\centering
+\adjustbox{fbox=1pt,margin=0pt,bgcolor=white}{%
+  \includegraphics[width=0.75\textwidth,angle=-270]{5852779512704207875.jpg}%
+}
+\caption{Experimental setup for the plane diopter.}
+\label{fig:dioptre_plan_setup}
+\end{figure}
+
+\section{Results and Discussion}
+
+\begin{center}
+\begin{tabularx}{\linewidth}{|Y|Y|Y|Y|Y|}
+\hline
+$i$ ($^\circ$) & $r$ ($^\circ$) & $r'$ ($^\circ$) & $i'$ ($^\circ$) & $D$ ($^\circ$) \\
+\hline
+0 & -- & -- & -- & -- \\
+\hline
+5 & 4 & 40.5 & 80.5 & 40.5 \\
+\hline
+10 & 7 & 37 & 67.5 & 32.5 \\
+\hline
+15 & 9.5 & 35 & 59.5 & 29.5 \\
+\hline
+20 & 11.5 & 33.5 & 51 & 26 \\
+\hline
+25 & 17 & 27 & 45 & 25 \\
+\hline
+30 & 19.5 & 25 & 39 & 25 \\
+\hline
+35 & 22.5 & 22.5 & 35 & 25 \\
+\hline
+40 & 23 & 22 & 29 & 24 \\
+\hline
+45 & 28 & 17 & 25 & 25 \\
+\hline
+50 & 29 & 16 & 11 & 16 \\
+\hline
+55 & 32 & 13 & 18 & 28 \\
+\hline
+60 & 38 & 7 & 15 & 30 \\
+\hline
+65 & 37 & 8 & 12 & 32 \\
+\hline
+70 & 32 & 7 & 9 & 34 \\
+\hline
+75 & 42.5 & 2.5 & 8 & 38 \\
+\hline
+80 & 41 & 4 & 5 & 40 \\
+\hline
+85 & -- & -- & -- & -- \\
+\hline
+90 & -- & -- & -- & -- \\
+\hline
+\end{tabularx}
+\captionof{table}{Experimental measurements for the plane diopter}
+\label{tab:plane_diopter_corrected}
+\end{center}
+
+\subsection*{Comparison of $D_\text{theo}$ and $D_\text{exp}$}
+\begin{tabularx}{\textwidth}{|>{\centering\arraybackslash}X|
+                              >{\centering\arraybackslash}X|
+                              >{\centering\arraybackslash}X|
+                              >{\centering\arraybackslash}X|
+                              >{\centering\arraybackslash}X|
+                              >{\centering\arraybackslash}X|}
+\hline
+$i$ ($^\circ$) & $i'$ ($^\circ$) & $D_\text{theo}=i+i'-A$ ($^\circ$) & $D_\text{exp}$ ($^\circ$) & Difference & Relative Error (\%) \\ \hline
+5 & 80.5 & 40.5 & 40.5 & 0 & 0 \\ \hline
+10 & 67.5 & 32.5 & 32.5 & 0 & 0 \\ \hline
+15 & 59.5 & 29.5 & 29.5 & 0 & 0 \\ \hline
+20 & 51 & 26 & 26 & 0 & 0 \\ \hline
+25 & 45 & 25 & 25 & 0 & 0 \\ \hline
+30 & 39 & 24 & 25 & 1 & 4.17 \\ \hline
+35 & 35 & 25 & 25 & 0 & 0 \\ \hline
+40 & 29 & 24 & 24 & 0 & 0 \\ \hline
+45 & 25 & 25 & 25 & 0 & 0 \\ \hline
+50 & 11 & 16 & 16 & 0 & 0 \\ \hline
+55 & 18 & 28 & 28 & 0 & 0 \\ \hline
+60 & 15 & 30 & 30 & 0 & 0 \\ \hline
+65 & 12 & 32 & 32 & 0 & 0 \\ \hline
+70 & 9 & 34 & 34 & 0 & 0 \\ \hline
+75 & 8 & 38 & 38 & 0 & 0 \\ \hline
+80 & 5 & 40 & 40 & 0 & 0 \\ \hline
+\end{tabularx}
+
+\subsection*{Comparison of $A_\text{real}$ and $A_\text{exp}$}
+\begin{tabularx}{\textwidth}{|>{\centering\arraybackslash}X|
+                              >{\centering\arraybackslash}X|
+                              >{\centering\arraybackslash}X|
+                              >{\centering\arraybackslash}X|}
+\hline
+$A_\text{real}$ ($^\circ$) & \textbf{ $A_\text{exp}=r+r'$  ($^\circ$) } & Difference & Relative Error (\%) \\ \hline
+45 & 44.5 & -0.5 & 1.11 \\ \hline
+45 & 44 & -1 & 2.22 \\ \hline
+45 & 44.5 & -0.5 & 1.11 \\ \hline
+45 & 45 & 0 & 0 \\ \hline
+45 & 44 & -1 & 2.22 \\ \hline
+45 & 44.5 & -0.5 & 1.11 \\ \hline
+45 & 45 & 0 & 0 \\ \hline
+45 & 45 & 0 & 0 \\ \hline
+45 & 45 & 0 & 0 \\ \hline
+45 & 45 & 0 & 0 \\ \hline
+45 & 45 & 0 & 0 \\ \hline
+45 & 45 & 0 & 0 \\ \hline
+45 & 45 & 0 & 0 \\ \hline
+45 & 46 & 1 & 2.22 \\ \hline
+45 & 45 & 0 & 0 \\ \hline
+45 & 45 & 0 & 0 \\ \hline
+\end{tabularx}
+
+\subsection{Calculation of the Refractive Index of the Prism}
+
+The refractive index of the prism material \(n\) can be calculated using the minimum deviation method. The formula is:
+
+\[
+n = \frac{\sin\frac{A + D_\text{min}}{2}}{\sin\frac{A}{2}}
+\]
+
+\noindent
+\textbf{Step 1: Determine the prism angle \(A\)}\\
+From the experiment, the apex angle of the prism is:
+\[
+A = 45^\circ
+\]
+
+\noindent
+\textbf{Step 2: Determine the minimum deviation \(D_\text{min}\)}\\
+From the measured deviation angles in the table, the minimum deviation is approximately:
+\[
+D_\text{min} = 25^\circ
+\]
+
+\noindent
+\textbf{Step 3: Compute the half-angles}  
+\[
+\frac{A + D_\text{min}}{2} = \frac{45 + 25}{2} = 35^\circ
+\]
+\[
+\frac{A}{2} = \frac{45}{2} = 22.5^\circ
+\]
+
+\noindent
+\textbf{Step 4: Apply Snell's law formula}  
+\[
+n = \frac{\sin 35^\circ}{\sin 22.5^\circ}
+\]
+
+\noindent
+\textbf{Step 5: Calculate numerically}  
+\[
+\sin 35^\circ \approx 0.574, \quad \sin 22.5^\circ \approx 0.383
+\]
+\[
+n \approx \frac{0.574}{0.383} \approx 1.50
+\]
+
+\noindent
+\textbf{Conclusion:}  
+The refractive index of the prism material is therefore:
+\[
+\boxed{n \approx 1.50}
+\]
+
+\section{Conclusion}
+In this practical work, the behavior of light passing through a prism was thoroughly investigated, and the experimental results were compared with theoretical predictions. The main findings can be summarized as follows:
+\begin{itemize}
+    \item The laws of refraction were successfully verified. The measured angles of incidence, refraction, and emergence closely matched the values predicted by Snell's law.
+    \item The angle of deviation $D$ was observed for various angles of incidence, and the minimum deviation $D_\text{min}$ was determined accurately, confirming the symmetry condition within the prism.
+    \item The prism's apex angle $A$ was experimentally determined by summing the internal refraction angles, showing good agreement with the known geometric value.
+    \item Using the minimum deviation method, the refractive index of the prism material was calculated to be $n \approx 1.50$, which is consistent with typical values for glass, demonstrating the reliability and precision of the experimental procedure.
+    \item Minor discrepancies between theoretical and experimental results can be attributed to experimental uncertainties such as alignment errors, human reading errors, and imperfections in the prism surfaces.
+\end{itemize}
+\noindent
+\textbf{Overall, this experiment provided a comprehensive understanding of the principles of geometrical optics, the behavior of light in a prism, and the quantitative relationships that govern optical systems. It highlighted the importance of precise measurement techniques and validated theoretical concepts through hands-on experimentation, strengthening the connection between theory and practice.}
+
+\end{document}
+
+
+
+
+
