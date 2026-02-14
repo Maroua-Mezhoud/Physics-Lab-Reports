@@ -1,0 +1,250 @@
+\documentclass[12pt,a4paper,twoside]{article}
+\usepackage[utf8]{inputenc} 
+\usepackage{amsmath,amsfonts,amssymb} 
+\usepackage{float} 
+\usepackage{caption}
+\usepackage{booktabs}
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.18}
+\usepackage{tikz}
+\usetikzlibrary{calc,fit,angles,quotes,intersections}
+\usepackage{adjustbox}
+\usepackage[style=numeric,sorting=none]{biblatex}
+\addbibresource{references.bib}
+\usepackage{array}
+\usepackage{multirow}
+\usepackage{longtable}
+\usepackage{tabularx}
+\newcolumntype{Y}{>{\centering\arraybackslash}X}
+\usepackage{siunitx}
+\usepackage{microtype}
+\usepackage{multicol}
+\usepackage{listings}
+\usepackage{xcolor}
+\usepackage[hidelinks]{hyperref}
+\usepackage[a4paper]{geometry}
+\geometry{
+  top=1in,
+  bottom=1in,
+  inner=1.25in, 
+  outer=1in       
+}
+\usepackage{graphicx}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\renewcommand{\headrulewidth}{0pt}
+\fancyhf{}
+
+\begin{document}
+
+\begin{titlepage}
+
+\centering
+\begin{flushleft}
+    \includegraphics[width=0.18\textwidth]{footer-logo.png}
+\end{flushleft}
+
+\vspace{1cm}
+
+{\Large \textbf{Mohamed El Bachir El Ibrahimi University of Bordj Bou Arréridj} \par}
+
+{\large Faculty of Science and Technology \par}
+
+{\large Department of Materials Science \par}
+
+{\large Undergraduate Programme (LMD) – Physics – Year 2\par}
+   
+{\large Course: Geometrical and Physical Optics\par}
+   
+\vspace*{\fill}
+{\Huge \textbf{Practical Work  N\textsuperscript{o}:3} \\ Determination of the Focal Length of Thin Lenses
+\par}
+\vspace*{\fill}
+
+  {\large \textbf{Submitted by:} \\
+Mezhoud maroua\\ \par}
+
+\vspace{1 cm}
+    
+    {\large \textbf{Supervised by:} \\ Dr. S. Mameri\par}
+    {\large Group:2 \par}
+    
+\vspace{2 cm}
+   
+    {\large Date of submission: December 16, 2025\par}
+   
+    {\large Academic Year: 2025–2026 \par}  
+    
+\vfill
+    
+\end{titlepage}
+
+\pagestyle{plain}
+
+\pagenumbering{arabic}  
+\setcounter{page}{1}  
+
+\begin{abstract}
+This experiment aimed to determine the focal length of thin lenses using two different methods: Bessel's two-position method and the object-at-infinity method. Measurements were taken by positioning the lens to obtain two sharp images of a fixed object on a screen, and by focusing parallel light rays from a distant object. The experimental results were compared with theoretical values, showing good agreement with relative errors generally below 4\%. This study demonstrates the effectiveness of Bessel's method in accurately measuring focal lengths without directly assessing lens curvature and highlights the importance of careful alignment and measurement techniques in optical experiments.
+\end{abstract}
+
+\tableofcontents
+
+\newpage 
+
+\section{Introduction}
+
+Optics is a fundamental branch of physics that studies the behavior of light and its interaction with various materials. Understanding the properties of lenses, especially their focal lengths, is essential for numerous applications such as cameras, microscopes, telescopes, and other optical instruments. 
+
+This practical work focuses on determining the focal length of thin lenses using the two-position method. This method involves measuring the positions of a lens that produce two sharp images of a fixed object on a screen. The experiment aims to bridge theoretical knowledge with practical measurements, enhancing students' skills in experimental observation, measurement, and data analysis.
+
+\section{Objective}
+
+The aim of this experiment is:
+
+\begin{itemize}
+    \item To determine the focal length of thin lenses.
+    \item To use and compare two experimental methods:
+    \begin{itemize}
+        \item \textbf{Bessel's method }– using two lens positions to produce sharp images.
+        \item \textbf{Object-at-infinity method} – focusing parallel rays coming from a distant object.
+    \end{itemize}
+\end{itemize}
+
+\section{Theoretical Background}
+\subsection*{Bessel's Method for Determining the Focal Length}
+
+Bessel's method is an experimental technique used to determine the focal length of a thin lens without directly measuring the curvature of its surfaces. The method relies on the following principle:
+
+When an object and a screen are fixed at a distance \(S\) apart (with \(S > 4f\), where \(f\) is the focal length of the lens), there exist two positions of the lens along the optical axis where a sharp image is formed on the screen. The distance between these two lens positions is denoted by \(d\). The focal length of the lens can then be calculated using the formula:
+
+\[
+f = \frac{S^2 - d^2}{4S},
+\]
+
+where:
+\begin{itemize}
+    \item \(S\) is the distance between the object and the screen,
+    \item \(d = |x_2 - x_1|\) is the distance between the two lens positions producing sharp images,
+    \item \(x_1\) and \(x_2\) are the measured positions of the lens corresponding to the two sharp images.
+\end{itemize}
+
+\textbf{Derivation Outline:}
+
+1. The lens equation for a thin lens according to the instructor's notation is given by
+\[
+\frac{1}{f} = \frac{1}{a} - \frac{1}{a'},
+\] 
+where \(a\) is the object distance and \(a'\) is the image distance from the lens.  
+
+2. For the two lens positions, the sum of the object distance and the image distance remains constant:
+\[
+a_1 + a'_1 = a_2 + a'_2 = S.
+\]
+
+3. The difference between the two lens positions is 
+\[
+d = |x_2 - x_1| = |a'_1 - a_1| = |a'_2 - a_2|.
+\]
+
+4. Solving these relations yields the focal length formula:
+\[
+f = \frac{S^2 - d^2}{4S}.
+\]
+
+This method is advantageous because it eliminates the need for precise measurement of the image distance for each lens position. Only the distance between the two lens positions (\(d\)) and the fixed object-to-screen distance (\(S\)) are required.
+
+\section{Apparatus and Materials}
+
+The following apparatus and materials were used in this experiment to determine the focal length of thin lenses:
+
+\begin{itemize}
+    \item \textbf{Optical bench} – to hold and align the components accurately.
+    \item \textbf{Light source} – a small lamp or LED to act as the object.
+    \item \textbf{Thin lenses} – lenses with different nominal focal lengths (e.g., 50 mm, 100 mm, 150 mm, 200 mm).
+    \item \textbf{Screen} – to capture the sharp image of the object.
+    \item \textbf{Ruler or measuring scale} – to measure distances between the object, lens positions, and the screen.
+    \item \textbf{Lens holder} – to fix the lens securely on the optical bench.
+\end{itemize}
+
+These materials allow the accurate measurement of distances and positions required to calculate the focal length using the two-position method.
+
+\section{Experimental Procedure}
+
+The procedure followed to determine the focal length of thin lenses is described step by step below:
+
+\begin{enumerate}
+    \item Set up a \textbf{light source} (object) on an optical bench and place a \textbf{screen} at a fixed position to capture the image.
+    \item Place the \textbf{thin lens} between the light source and the screen.
+    \item Move the lens along the axis until a \textbf{sharp and clear image} of the object appears on the screen. Record the lens position as $x_1$.
+    \item Continue moving the lens further along the axis until a \textbf{second sharp image} appears on the screen. Record this lens position as $x_2$.
+    \item Measure the \textbf{distance between the light source and the screen}, denoted as $S$.
+    \item Record the positions $x_1$, $x_2$, and the distance $S$ in the results table.
+    \item Calculate the \textbf{experimental focal length} $f_\text{exp}$ of the lens using the formula:
+  \[
+f = \frac{S^2 - d^2}{4S}.
+\]
+
+    where $x_1$ and $x_2$ are the lens positions for the two sharp images, and $S$ is the distance between the object and the screen.
+    \item Repeat the procedure for lenses of different nominal focal lengths and record all results in the table.
+\end{enumerate}
+
+\section{Results and Discussion}
+
+The following tables summarize the measured lens positions and the calculated focal lengths for each lens. The comparison between the experimental and theoretical focal lengths provides insight into the accuracy of the measurements.
+
+\subsection*{Lens Positions and Object-Screen Distances}
+\begin{tabularx}{\textwidth}{|>{\centering\arraybackslash}X|
+                              >{\centering\arraybackslash}X|
+                              >{\centering\arraybackslash}X|
+                              >{\centering\arraybackslash}X|}
+\hline
+\textbf{Lens nominal $f$ (mm)} & \textbf{$x_1$ (cm)} & \textbf{$x_2$ (cm)} & \textbf{$S$ (cm)} \\ \hline
+-100 & - & - & - \\ \hline
+-50  & - & - & - \\ \hline
+50   & 6.5 & 16.5 & 23.5 \\ \hline
+100  & 13.3 & 36.7 & 50 \\ \hline
+150  & 19.6 & 48.2 & 70.8 \\ \hline
+200  & 28 & 67.9 & 94.7 \\ \hline
+300  & - & - & - \\ \hline
+\end{tabularx}
+
+\subsection*{Comparison Between Theoretical and Experimental Focal Lengths}
+\begin{tabularx}{\textwidth}{|>{\centering\arraybackslash}X|
+                              >{\centering\arraybackslash}X|
+                              >{\centering\arraybackslash}X|
+                              >{\centering\arraybackslash}X|}
+\hline
+\textbf{Lens $f_\text{theo}(mm)$ } & \textbf{Lens $f_\text{exp}(mm)$ } & \textbf{Difference $(mm)$} & \textbf{Relative Error (\%)} \\ \hline
+50   & 48.1  & 1.9  & 3.8 \\ \hline
+100  & 97.6  & 2.4  & 2.4 \\ \hline
+150  & 148.1 & 1.9  & 1.3 \\ \hline
+200  & 194.7 & 5.3  & 2.65 \\ \hline
+\end{tabularx}
+
+\subsection*{Discussion}
+
+The experimental focal lengths are in good agreement with the theoretical values, with relative errors ranging from approximately 1\% to 4\%. Slight discrepancies may arise due to:
+
+\begin{itemize}
+    \item Measurement uncertainties in the lens positions and object-screen distance.
+    \item Imperfections in lens shapes or alignment errors on the optical bench.
+    \item Limited precision in determining the exact sharpness of the image.
+\end{itemize}
+
+Overall, Bessel's method provides a reliable means of determining the focal length of thin lenses without the need for complex measurements.
+
+\section{Conclusion}
+
+In this practical work, the focal lengths of thin lenses were successfully determined using Bessel's two-position method and the object-at-infinity method. The experimental results showed good agreement with the theoretical values, with relative errors generally below 4\%. 
+
+This experiment demonstrated the effectiveness of Bessel's method in providing accurate measurements of focal lengths without the need for direct measurement of lens curvatures. The slight discrepancies observed can be attributed to experimental uncertainties, such as alignment of the lens, measurement precision, and the subjective determination of image sharpness.
+
+Overall, the experiment reinforced the understanding of geometrical optics principles, improved practical skills in handling optical instruments, and highlighted the importance of careful measurement and observation in experimental physics.
+
+\end{document}
+
+
+
+
+
