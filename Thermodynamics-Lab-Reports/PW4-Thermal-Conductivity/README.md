@@ -1,11 +1,12 @@
 # 🌡️ Thermodynamics Laboratory: Thermal Conductivity Analysis
 
-This folder contains my undergraduate laboratory report on **Thermal Conductivity in Construction Materials**, which represents a key component of the Thermodynamics curriculum. This work demonstrates the integration of classical experimental methods with modern numerical simulation.
+This folder contains my laboratory report on **Thermal Conductivity in Construction Materials**, which represents a key component of the Thermodynamics curriculum. This work demonstrates the integration of classical experimental methods with modern numerical simulation.
 
 ### 🎓 Academic Context
 * **University:** Mohamed El Bachir El Ibrahimi University of Bordj Bou Arréridj
 * **Faculty:** Faculty of Science and Technology
 * **Department:** Department of Materials Science
+* **Laboratory No.:** 13
 * **Course:** Thermodynamics (Year 2)
 * **Supervision:** Conducted under the academic guidance of **Dr. N. Benchiheub**.
 
