@@ -1,4 +1,4 @@
-# 🔬 PW1: The Prism
+# 🔬 PW2: The Prism
 
 ## 📝 Overview
 
