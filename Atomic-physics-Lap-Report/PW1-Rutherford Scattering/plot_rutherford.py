@@ -71,8 +71,8 @@ fig.tight_layout()
 # --------------------------------------------------
 # 4. Save the figures
 # --------------------------------------------------
-output_dir = Path("figures")
-output_dir.mkdir(exist_ok=True)
+output_dir = Path("images/graphes")
+output_dir.mkdir(parents=True, exist_ok=True)
 
 fig.savefig(
     output_dir / "rutherford_scattering.png",
@@ -84,6 +84,12 @@ fig.savefig(
     output_dir / "rutherford_scattering.pdf",
     bbox_inches="tight"
 )
+
+print(f"Number of simulation points: {len(data)}")
+print("Figures saved successfully in the images/graphes folder.")
+
+plt.show()
+
 
 print(f"Number of simulation points: {len(data)}")
 print("Figures saved successfully in the figures folder.")
